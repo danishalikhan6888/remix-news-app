@@ -1,0 +1,149 @@
+/* ./styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Chronicle Text G2";
+    src: url(../fonts/ChronicleTextG2-Roman-Pro.otf);
+}
+@font-face {
+    font-family: "Chronicle Display";
+    src: url(../fonts/ChronicleDisp-Black.otf);
+}
+@font-face {
+    font-family: "Chronicle Display semiBold";
+    src: url(../fonts/ChronicleDisp-Semibold.otf);
+}
+@font-face {
+    font-family: "Chronicle Display Bold";
+    src: url(../fonts/ChronicleDisp-Bold.otf);
+}
+@font-face {
+    font-family: "Chronicle Display black";
+    src: url(../fonts/ChronicleDisp-Black.otf);
+}
+@font-face {
+    font-family: "Chronicle Display cond semibold";
+    src: url(../fonts/ChronicleDispCond-Semibold.otf);
+}
+@font-face {
+    font-family: "Chronicle Display cond bold";
+    src: url(../fonts/ChronicleDispCond-Bold.otf);
+}
+@font-face {
+    font-family: "ivyMode";
+    src: url(../fonts/IvyMode-SemiBold.ttf);
+}
+.f-f-s {
+    font-family: "Source Sans Pro", sans-serif;
+}
+.f-f-ctg2 {
+    font-family: "Chronicle Text G2";
+}
+.f-f-cd {
+    font-family: "Chronicle Display";
+}
+.f-f-cdb {
+    font-family: "Chronicle Display Bold";
+}
+.f-f-cdbb {
+    font-family: "Chronicle Display black";
+}
+.f-f-cds {
+    font-family: "Chronicle Display semiBold";
+}
+.f-f-cds2 {
+    font-family: "Chronicle Display cond semibold";
+}
+.f-f-cdb2 {
+    font-family: "Chronicle Display cond bold";
+}
+.f-f-i {
+    font-family: "ivyMode";
+}
+body {
+    background: #F9F9F5;
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+.mask {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.85) 100%);
+}
+
+/* swiper css */
+
+.swiper-button-next {
+    width: 32px !important;
+    height: 32px !important;
+    top: 36% !important;
+    margin-right: -20px !important;
+}
+.swiper-button-prev {
+    width: 32px !important;
+    height: 32px !important;
+    top: 36% !important;
+    margin-left: -20px !important;
+}
+
+.swiper-button-next::after {
+    content: "" !important;
+}
+.swiper-button-prev::after {
+    content: "" !important;
+}
+.mask-right {
+    top: 6% !important;
+    margin-right: 5px;
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+}
+.mask-left {
+    top: 6% !important;
+    margin-right: -5px;
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+    transform: rotate(180deg);
+}
+
+/* video player css */
+
+.plyr--full-ui input[type="range"] {
+    color: yellow !important;
+}
+
+.plyr--video .plyr__control.plyr__tab-focus,
+.plyr--video .plyr__control:hover,
+.plyr--video .plyr__control[aria-expanded="true"] {
+    background: #fff !important;
+    color: yellow !important;
+    border-radius: 9999px;
+    --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.plyr__video-wrapper.plyr__video-embed {
+    aspect-ratio: 16 / 9 !important;
+}
+
+.plyr__video-wrapper {
+    background: none !important;
+}
+
+.plyr--video {
+    background: transparent !important;
+}
+
+.plyr__control--overlaid {
+    background: var(--primary-color) !important;
+}
+
+.plyr--full-ui .plyr__video-embed > .plyr__video-embed__container {
+    transform: translateY(-38.35%) !important;
+}
+
+ul li {
+    list-style-position: outside;
+    margin-left: 1em;
+}
+
+
+/* custom animations */

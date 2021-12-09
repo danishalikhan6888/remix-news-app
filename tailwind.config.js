@@ -1,0 +1,101 @@
+module.exports = {
+  mode: "jit",
+  purge: ["./app/**/*.{js,jsx}"],
+  darkMode: "class", // or 'media' or 'class'
+  // theme: {
+  //   extend: {},
+  // },
+  theme: {
+    extend: {
+        colors: {
+            headerGray: "#EDEDE8",
+            sunGolden: "#B5903E",
+            gray1: "#939399",
+            gray2: "#51515C",
+            gray3: "#737373",
+            gray4: "#D6D3D1",
+            gray5: "#F9F9F5",
+            gray6: "#E0E0DD",
+            gray7: "#E5E7EB",
+            darkGray: "#676770",
+            lightGray: "#D4D4D6",
+            coolCharcol: "#262633",
+            blue1: "#152175",
+            blue2: "#082A4C",
+            blue3: "#2C538C",
+            blue4: "#041E3A",
+            sunRed: "#DB5640",
+            red2: "#A81A31",
+            skyblue1: "#BAE0DC",
+        },
+        width: {
+            "198px": "198px",
+            "175px": "175px",
+            "200px": "200px",
+            "241px": "241px",
+            "312px": "312px",
+            "278px": "278px",
+            "95px": "95px",
+        },
+        height: {
+            "32px": "32px",
+            "34px": "34px",
+            "330px": "330px",
+            "145px": "145px",
+            "248px": "248px",
+            "462px": "462px",
+        },
+        lineHeight: {
+            "14px": "14px",
+            "18px": "18px",
+            "26px": "26px",
+            "30px": "30px",
+        },
+        padding: {
+            "15px": "15px",
+            "34px": "34px",
+            "52px": "52px",
+            "60px": "60px",
+            "74px": "74px",
+            "72px": "72px",
+            "184px": "184px",
+
+        },
+        boxShadow: {
+            shadowBtn: "0px 3px #9C7C35",
+            shadowBtn2: "0px 3px #0F1752",
+            shadowBtn3: "0px 5px #9C7C35",
+            shadow3: "0px 2px 5px rgba(0, 0, 0, 0.06), 0px 4px 6px -1px rgba(0, 0, 0, 0.1);",
+        },
+        fontSize: {
+            28: "28px",
+            26: "26px",
+            22: "22px",
+            11: "11px",
+        },
+        margin: {
+            "74px": "74px",
+            "72px": "72px",
+            "25px": "25px",
+            "34px": "34px",
+            "60px": "60px",
+            "46px": "46px",
+            "142px": "142px",
+        },
+        gap: {
+            "87px": "87px",
+        },
+        maxWidth: {
+            "664px": "664px",
+            "358px": "358px",
+        },
+        zIndex: {
+            60: "60",
+        },
+    },
+},
+  variants: {
+    extend: {},
+  },
+  plugins: [],
+}
