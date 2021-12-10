@@ -59,8 +59,8 @@ export default function Index() {
   
   return (
     <div> 
-      <div onClick={handleSubmit}>switch</div>  
-      {/*   <Link to="article">article</Link> */}
+      <div className="danish" onClick={handleSubmit}>switch</div>  
+        <Link to="/">home</Link>
       <Outlet />
       <HomePage />
     </div>

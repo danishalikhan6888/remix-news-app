@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
         colors: {
-            headerGray: "#EDEDE8",
+            warmGray: "#EDEDE8",
             sunGolden: "#B5903E",
             gray1: "#939399",
             gray2: "#51515C",
@@ -27,6 +27,7 @@ module.exports = {
             sunRed: "#DB5640",
             red2: "#A81A31",
             skyblue1: "#BAE0DC",
+            brightOrnage: "#F4B647",
         },
         width: {
             "198px": "198px",
@@ -35,7 +36,10 @@ module.exports = {
             "241px": "241px",
             "312px": "312px",
             "278px": "278px",
+            "100px": "100px",
             "95px": "95px",
+            "42px": "42px",
+
         },
         height: {
             "32px": "32px",
@@ -44,22 +48,30 @@ module.exports = {
             "145px": "145px",
             "248px": "248px",
             "462px": "462px",
+            "100px": "100px",
+            "200px": "200px",
+            "411px": "411px",
+            "596px": "596px",
         },
         lineHeight: {
             "14px": "14px",
             "18px": "18px",
             "26px": "26px",
             "30px": "30px",
+            "44px": "44px",
+            "56px": "56px",
         },
         padding: {
             "15px": "15px",
+            "18px": "18px",
+            "30px": "30px",
             "34px": "34px",
             "52px": "52px",
             "60px": "60px",
             "74px": "74px",
             "72px": "72px",
+            "84px": "84px",
             "184px": "184px",
-
         },
         boxShadow: {
             shadowBtn: "0px 3px #9C7C35",
@@ -77,10 +89,13 @@ module.exports = {
             "74px": "74px",
             "72px": "72px",
             "25px": "25px",
+            "26px": "-26px",
             "34px": "34px",
             "60px": "60px",
             "46px": "46px",
+            "130px": "130px",
             "142px": "142px",
+            "183px": "183px",
         },
         gap: {
             "87px": "87px",
@@ -88,6 +103,9 @@ module.exports = {
         maxWidth: {
             "664px": "664px",
             "358px": "358px",
+            "200px": "200px",
+            "432px": "432px",
+            "1292px":"1292px"
         },
         zIndex: {
             60: "60",

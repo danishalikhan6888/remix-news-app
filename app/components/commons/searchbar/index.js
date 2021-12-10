@@ -1,5 +1,5 @@
 import React ,{ useContext} from "react"; 
-import { Context } from "../../../store/store";
+import {Context}  from "../../../store/store";
 function Index( ) {
   const {  dispatch } = useContext(Context); 
     const data = [

@@ -2,39 +2,89 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* @import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities"; */
 
+.danish{
+    color: red;
+}
+:root {
+    --background-color: "";
+}
+
+/* for smooth scroll */
+*,
+html {
+    scroll-behavior: smooth;
+}
+
+  @font-face {
+    font-family: 'Chronicle Text G2';
+    src: local('Chronicle Text G2'), url(../fonts/ChronicleTextG2-Roman-Pro.otf) format('otf'); 
+  }
+
+  @font-face {
+    font-family: 'Chronicle Display';
+    src: local('Chronicle Display'), url(../fonts/ChronicleDisp-Black.otf) format('otf'); 
+  }
+  @font-face {
+    font-family: 'Chronicle Display semiBold';
+    src: local('Chronicle Display semiBold'), url(../fonts/ChronicleDisp-Semibold.otf) format('otf'); 
+  }
+  @font-face {
+    font-family: 'Chronicle Display Bold';
+    src: local('Chronicle Display Bold'), url(../fonts/ChronicleDisp-Bold.otf) format('otf'); 
+  }
+  @font-face {
+    font-family: 'Chronicle Display black';
+    src: local('Chronicle Display black'), url(../fonts/ChronicleDisp-Black.otf) format('otf'); 
+  }
+  @font-face {
+    font-family: 'Chronicle Display cond semibold';
+    src: local('Chronicle Display cond semibold'), url(../fonts/ChronicleDispCond-Semibold.otf) format('otf'); 
+  }
+  @font-face {
+    font-family: 'Chronicle Display cond bold';
+    src: local('Chronicle Display cond bold'), url(../fonts/ChronicleDispCond-Bold.otf) format('otf'); 
+  }
+  @font-face {
+    font-family: 'ivyMode';
+    src: local('ivyMode'), url(../fonts/IvyMode-SemiBold.ttf) format('ttf'); 
+  }
+/* 
 @font-face {
     font-family: "Chronicle Text G2";
     src: url(../fonts/ChronicleTextG2-Roman-Pro.otf);
-}
-@font-face {
+} */
+/* @font-face {
     font-family: "Chronicle Display";
     src: url(../fonts/ChronicleDisp-Black.otf);
-}
-@font-face {
+} */
+/* @font-face {
     font-family: "Chronicle Display semiBold";
     src: url(../fonts/ChronicleDisp-Semibold.otf);
-}
-@font-face {
+} */
+/* @font-face {
     font-family: "Chronicle Display Bold";
     src: url(../fonts/ChronicleDisp-Bold.otf);
-}
-@font-face {
+} */
+/* @font-face {
     font-family: "Chronicle Display black";
     src: url(../fonts/ChronicleDisp-Black.otf);
-}
-@font-face {
+} */
+/* @font-face {
     font-family: "Chronicle Display cond semibold";
     src: url(../fonts/ChronicleDispCond-Semibold.otf);
-}
-@font-face {
+} */
+/* @font-face {
     font-family: "Chronicle Display cond bold";
     src: url(../fonts/ChronicleDispCond-Bold.otf);
-}
-@font-face {
+} */
+/* @font-face {
     font-family: "ivyMode";
     src: url(../fonts/IvyMode-SemiBold.ttf);
-}
+} */
 .f-f-s {
     font-family: "Source Sans Pro", sans-serif;
 }
@@ -104,20 +154,52 @@ body {
     transform: rotate(180deg);
 }
 
-/* video player css */
-
-.plyr--full-ui input[type="range"] {
-    color: yellow !important;
+ul li {
+    list-style-position: outside;
+    margin-left: 1em;
+}
+.mySwiper2 {
+    padding-bottom: 64px !important;
 }
 
+.s2 .swiper-button-next {
+    position: relative !important;
+}
+.s2 .swiper-button-prev {
+    position: relative !important;
+}
+
+/*  */
+.swiper-pagination-bullet {
+    transform: scale(1) !important;
+    background: transparent !important;
+    border: 1px solid #262633;
+    opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active-main {
+    transform: scale(1) !important;
+    background: #262633 !important;
+    border: 1px solid #262633 !important;
+    opacity: 1 !important;
+}
+
+/* video player css */
+
+/* Video progress bar color css */
+
 .plyr--video .plyr__control.plyr__tab-focus,
-.plyr--video .plyr__control:hover,
+.plyr--video .plyr__control,
 .plyr--video .plyr__control[aria-expanded="true"] {
-    background: #fff !important;
-    color: yellow !important;
+    background: #f9f9f5 !important;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #262633 !important;
     border-radius: 9999px;
-    --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .plyr__video-wrapper.plyr__video-embed {
@@ -133,17 +215,54 @@ body {
 }
 
 .plyr__control--overlaid {
-    background: var(--primary-color) !important;
+    background: #262633 !important;
 }
 
 .plyr--full-ui .plyr__video-embed > .plyr__video-embed__container {
     transform: translateY(-38.35%) !important;
 }
-
-ul li {
-    list-style-position: outside;
-    margin-left: 1em;
+.plyr__control--overlaid {
+    width: 64px !important;
+    height: 64px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    z-index: 60;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
 
+.plyr__controls {
+    justify-content: flex-start !important;
+}
+.bigVideo .plyr .plyr__controls {
+    padding-top: 450px;
+}
 
-/* custom animations */
+.plyr__time {
+    width: 100%;
+    text-align: left;
+}
+
+/* custom scroll bar */
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px transparent;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #262633;
+    border-radius: 5px;
+}
+
+.cart::-webkit-scrollbar {
+    display: none;
+}
+

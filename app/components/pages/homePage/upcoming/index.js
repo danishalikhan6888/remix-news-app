@@ -15,7 +15,7 @@ function index() {
             <div className="mt-4 w-full">
                 {data.map((item, i) => {
                     return (
-                        <Link to="javascript:void(0)">
+                        <Link key={i} to="javascript:void(0)">
                             <img src={item.img} id={i} className={`${i >= 1 && "mt-4"} border-b pb-4 ${i === data.length - 1 ? "border-darkGray" : "border-lightGray"}`}/>
                         </Link>
                     );

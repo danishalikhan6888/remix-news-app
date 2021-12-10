@@ -81,7 +81,7 @@ function index() {
             <div className="border-b border-darkGray py-4 grid grid-cols-3 gap-8">
                 {data.map((item, i) => {
                     return (
-                        <div>
+                        <div key={i}>
                             <img alt={item.alt} className="" src={item.img} />
                             <p className="text-xs leading-3 mt-2 text-gray3">{item.alt}</p>
                             <div className="mt-4">

@@ -32,7 +32,7 @@ function index() {
                 <div className="w-2/3  pr-4 border-r border-lightGray">
                     {data.map((item, i) => {
                         return (
-                            <div className={`${i >= 1 && "mt-4"} ${i === 0 && "border-b border-lightGray pb-4"}`}>
+                            <div key={i} className={`${i >= 1 && "mt-4"} ${i === 0 && "border-b border-lightGray pb-4"}`}>
                                 <div className="flex items-start space-x-4">
                                     <div>
                                         <p className="text-xl f-f-cd leading-6">{item.heading}</p>

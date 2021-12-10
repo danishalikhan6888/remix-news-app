@@ -24,7 +24,7 @@ function index() {
                 {data.map((item, i) => {
                     return (
                         <div key={i} className={`  ${i >= 1 && "mt-4"}  ${i !== data.length - 1 && "border-b border-lightGray"} cursor-pointer  pb-4 `}>
-                            <ReactPlayer url="https://www.youtube.com/watch?v=F16ZS6rM29s" controls={true} width="327px" height="200px" />
+                            <ReactPlayer url="https://www.youtube.com/watch?v=F16ZS6rM29s" origin='http://localhost:3000'  controls={true} width="327px" height="200px" />
                         </div>
                     );
                 })}

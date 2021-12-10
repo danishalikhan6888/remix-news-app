@@ -57,7 +57,7 @@ function index() {
                 <div className="flex items-start">
                     {data.map((item, i) => {
                         return (
-                            <div className="w-1/2">
+                            <div key={i} className="w-1/2">
                                 <div className={`flex items-start space-x-8 ${i === data.length-1 && "ml-4 border-l pl-4 border-lightGray"}`}>
                                     <img src={item.img} alt={i} />
                                     <div>

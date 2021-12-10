@@ -29,7 +29,7 @@ function index() {
             <div className="mt-4 w-full">
                 {data.map((item, i) => {
                     return (
-                        <Link to="javascript:void(0)">
+                        <Link key={i} to="javascript:void(0)">
                             <div className={` border-b ${i >= 1 && "mt-4"}  ${i === data.length - 1 ? "border-darkGray" : "border-lightGray"} cursor-pointer flex items-start space-x-3 pb-4`}>
                                 <p className="text-gray1 text-2xl leading-6 f-f-i">{i + 1 + "."}</p>
                                 {item.img && (

@@ -80,7 +80,7 @@ function index() {
             <div className="mt-4 grid xl:grid-cols-3 gap-4">
                 {data.map((item, i) => {
                     return (
-                        <div id={i} className={`  ${i === data.length - 1 ? "pr-4" : (i + 1) % 3 === 0 ? "" : "pr-4 border-r border-lightGray"} `}>
+                        <div key={i} id={i} className={`  ${i === data.length - 1 ? "pr-4" : (i + 1) % 3 === 0 ? "" : "pr-4 border-r border-lightGray"} `}>
                             <p className="uppercase text-coolCharcol text-lg leading-18px f-f-ctg2">{item.heading}</p>
                             <Link to="javascript:void(0)">
                                 <div className="cursor-pointer">

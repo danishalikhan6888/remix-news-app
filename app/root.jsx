@@ -8,36 +8,51 @@ import {
   ScrollRestoration,
   useCatch
 } from "remix";
-import React, { useState, useEffect,useContext } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Header from './components/commons/header/index'
 import Footer from './components/commons/footer/index'
-import SearchBar from './components/commons/searchbar/index'
+import SearchAndScroll from './components/commons/scroll/index'
 import SideBar from './components/commons/sidebar/index'
-
+import {useLocation} from 'react-router-dom'
 // CONTEXT api import started 
-import { Provider,Context } from "./store/store"; 
+import { Provider, Context } from "./store/store";
 // redux imports ended 
 import globalStylesUrl from "~/styles/global.css";
 import darkStylesUrl from "~/styles/dark.css";
+import slickSlider1 from "slick-carousel/slick/slick.css";
+import slickSlider2 from "slick-carousel/slick/slick-theme.css";
+import fonts from "../public/assets/styles/index.css";
 import styles from "./tailwind.css";
-// import swipperstyle from "../node_modules/swiper/swiper-bundle.min.css";
+import swiper from "../node_modules/swiper/swiper-bundle.min.css";
+
 // https://remix.run/api/app#links
 export let links = () => {
-  return [ 
+  return [
     { rel: "stylesheet", href: styles },
-    // { rel: "stylesheet", href: swipperstyle },
+    { rel: "stylesheet", href: slickSlider1 },
+    { rel: "stylesheet", href: slickSlider2 },
+    { rel: "stylesheet", href: globalStylesUrl },
+    { rel: "stylesheet", href: swiper },
+    { rel: "stylesheet", href: fonts },
+    { rel: "preconnect", href: "https://fonts.googleapis.com" },
+    { rel: "preconnect", href: "https://fonts.gstatic.com" },
+    { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" }
   ];
 };
- 
+
+
+// <link rel="preconnect" href="https://fonts.googleapis.com" />
+// <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+// <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet" />
 export default function App() {
   return (
-    <Document title="NYS" > 
-      <Provider >
-        <Layout   >
-          <Outlet />
-        </Layout>
-      </Provider> 
+
+    <Document title="NYS" >
+      <Layout   >
+        <Outlet />
+      </Layout>
     </Document>
+
   );
 }
 
@@ -118,26 +133,27 @@ function Document({ children, title }) {
 }
 
 function Layout({ children }) {
-  const { search } = useContext(Context);  
-  useEffect(() => {
-    if (search) {
-      document.body.style.overflow = "hidden";
-    } else if (performance.getEntriesByType("navigation")[0].type === "reload") {
-      document.body.style.overflow = "auto";
-      window.scroll(0, 0);
-    } else {
-      document.body.style.overflow = "auto";
-      window.scroll(0, 0);
-    }
-  }, [search]);
+  const router = useLocation(); 
+    const getprimaryColor = (color) => { 
+      document.documentElement.style.setProperty("--background-color", color);
+      alert(document.documentElement.style.getPropertyValue("--background-color"))
+    };
+    useEffect(() => {
+      if (router.pathname === "/media") {   
+        getprimaryColor("black");
+      } else {
+        getprimaryColor("#f9f9f5");
+      }
+    }, [router.pathname]);
   return (
     < >
-      <Header />
-      {children}
-     <Footer />
-      <SideBar />
-       {search && <SearchBar />}
+      <Provider >
+        <Header />
+        {children}
+        <Footer />
+        <SideBar />
+        <SearchAndScroll />
+      </Provider>
     </>
   );
 }
- 

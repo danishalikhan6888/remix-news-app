@@ -52,3 +52,8 @@ rm -rf app
 cp -R ../my-old-remix-app/app app
 ```
 
+-Article page in Remix.js
+-Article Detial page Remix.js
+-Media page 
+-3rd party swiper.js issue resolved , media player integrated 
+-Routing concatination issue resolved 

@@ -75,7 +75,7 @@ function index() {
             <div className="flex items-center border-t mt-4 border-b border-darkGray py-4 ">
                 {data.map((item, i) => {
                     return (
-                        <div className={`${i >= 1 && "ml-74px pl-74px border-l border-lightGray"}`}>
+                        <div key={i} className={`${i >= 1 && "ml-74px pl-74px border-l border-lightGray"}`}>
                             <p className="text-xl leading-6 f-f-cdb font-semibold">{item.heading}</p>
                             <p className="mt-3 f-f-ctg2 text-gray2 text-sm leading-18px ">
                                 {item.description}

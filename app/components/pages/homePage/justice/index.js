@@ -47,7 +47,7 @@ function index() {
                 <div className="w-2/3  pr-4 border-r border-lightGray">
                     {data.map((item, i) => {
                         return (
-                            <div className={`${i >= 1 && "mt-4"} ${i === 0 && "border-b border-lightGray pb-4"}`}>
+                            <div key={i} className={`${i >= 1 && "mt-4"} ${i === 0 && "border-b border-lightGray pb-4"}`}>
                                 <div className="flex items-start space-x-4">
                                     <div>
                                         <p className="text-xl f-f-cd leading-6">{item.heading}</p>
@@ -70,7 +70,7 @@ function index() {
                 <div className="w-1/3 ml-4">
                     {data2.map((item, i) => {
                         return (
-                            <div className={`${i >= 1 && "mt-4"} ${i === 0 && "border-b border-lightGray pb-4"}`}>
+                            <div key={i} className={`${i >= 1 && "mt-4"} ${i === 0 && "border-b border-lightGray pb-4"}`}>
                                 <p className="text-xl f-f-cdb leading-6">{item.heading}</p>
                                 <p className="mt-3 f-f-ctg2 text-gray2 text-sm leading-18px pr-2">{item.description}</p>
                                 <div className="mt-3 flex items-center text-coolCharcol text-xs leading-3 f-f-ctg2">

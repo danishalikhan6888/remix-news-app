@@ -22,7 +22,7 @@ function index() {
                 <div className="mt-4 w-full">
                     {data.map((item, i) => {
                         return (
-                            <Link to="javascript:void(0)">
+                            <Link key={i} to="javascript:void(0)">
                                 <div className={`${i >= 1 && "mt-4"} f-f-cds2 text-xl leading-6 pb-4 ${i !== data.length - 1 && "border-b border-lightGray"}`}>{item.text}</div>
                             </Link>
                         );

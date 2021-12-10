@@ -1,49 +1,52 @@
  
 import React, {  useContext} from "react";
-import {Link} from "remix"; 
-import { useLocation } from "react-router-dom";  
-import { Context } from "../../../store/store";
+import {Link , Outlet} from "remix"; 
+import { useLocation ,useNavigate} from "react-router-dom";   
+import {Context}  from "../../../store/store";
 function Index() {
     const router = useLocation();
+    const navigate= useNavigate()
     const {  dispatch } = useContext(Context); 
     const sections = [
         {
             name: "National",
-            link: "article",
+            link: "/articleDetail",
         },
         {
             name: "Foreign",
-            link: "article",
+            link: "/articleDetail",
         },
         {
             name: "Politics",
-            link: "article",
+            link: "/articleDetail",
         },
         {
             name: "Culture ",
-            link: "article",
+            link: "/articleDetail",
         },
         {
             name: "Economy ",
-            link: "article",
+            link: "/articleDetail",
         },
         {
             name: "Education ",
-            link: "article",
+            link: "/articleDetail",
         },
         {
             name: "Justice ",
-            link: "article",
+            link: "/articleDetail",
         },
         {
             name: "Opinion ",
-            link: "article",
+            link: "/article",
         },
     ];
     const handleMenu= ()=>{
-        dispatch({type:"SWITCH_MENU"})
-     }
+        dispatch({type:"SWITCH_MENU",payload:null})
+     } 
     return (
+        <>
+        
         <div className={`flex items-center ${router.pathname === "/" ? "justify-between" : "justify-center"} py-4 border-t border-gray1 border-b`}>
             {router.pathname === "/" && (
                 <button onClick={() => handleMenu()} className="flex items-center space-x-2.5 focus:outline-none text-coolCharcol text-sm leading-14px f-f-s w-1/4">
@@ -58,8 +61,8 @@ function Index() {
             <ul className={`flex items-center space-x-6 text-sm leading-14px f-f-s ${router.pathname === "/" ? "w-1/2" : ""} justify-center`}>
                 {sections.map((item, i) => {
                     return (
-                        <Link to={item.link}>
-                            <li key={i} className="text-coolCharcol cursor-pointer">
+                        <Link key={i}  to={item.link}>
+                            <li  className="text-coolCharcol cursor-pointer">
                                 {item.name}
                             </li>
                         </Link>
@@ -68,6 +71,8 @@ function Index() {
             </ul>
             {router.pathname === "/" && <div className="w-1/4" />}
         </div>
+        <Outlet/>
+        </>
     );
 }
 
